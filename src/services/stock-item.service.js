@@ -10,7 +10,7 @@ export class StockItemService {
       url: "/stock-items",
       method: "GET",
     }).then((response) => response.data.data.stockItems);
-  }
+  } 
 
   // Demande un stock item, retourne le correlationId
   async requestStockItem(idItem) {
