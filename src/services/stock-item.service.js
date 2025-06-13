@@ -7,22 +7,8 @@ export class StockItemService {
 
   async listStockItems() {
     return axios({
-      url: "/api/graphql",
-      method: "POST",
-      data: {
-        query: `
-                {
-                    stockItems {
-                        id
-                        manufacturer
-                        name
-                        picture
-                        stock
-                        unitPrice
-                    }
-                }
-                `,
-      },
+      url: "/stock-items",
+      method: "GET",
     }).then((response) => response.data.data.stockItems);
   }
 
