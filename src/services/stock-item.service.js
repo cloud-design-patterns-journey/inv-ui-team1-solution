@@ -7,7 +7,7 @@ export class StockItemService {
 
   async listStockItems() {
     return axios({
-      url: "/stock-items",
+      url: "http://localhost:3001/stock-items",
       method: "GET",
     }).then((response) => response.data.data.stockItems);
   } 
